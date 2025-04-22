@@ -1,0 +1,23 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Gympass style app",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/node": "22.14.1",
+    "tsup": "8.4.0",
+    "tsx": "4.19.3",
+    "typescript": "5.8.3"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsup src/server.ts --out-dir build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "5.3.2"
+  }
+}

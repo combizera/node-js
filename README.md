@@ -30,3 +30,25 @@ Gympass style app
 - [ ] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
 - [ ] Todas listas de dados precisam estar paginadas com 20 itens por página;
 - [ ] O usuário deve ser identificado por um JWT (JSON Web Token);
+
+---
+
+## Repository Pattern
+
+### Vantagens:
+
+- **Separação de Responsabilidades**: Desacopla a lógica de acesso a dados da lógica de negócios, tornando o código mais fácil de manter e testar.
+- **Testabilidade**: Facilita testes unitários ao permitir o uso de repositórios mock em vez de conexões reais com o banco de dados.
+- **Abstração**: Fornece uma camada clara de abstração para acesso a dados, facilitando a troca entre diferentes fontes de dados ou ORMs sem impactar a lógica de negócios.
+- **Reutilização**: Promove a reutilização de código ao centralizar a lógica de acesso a dados em uma única classe de repositório.
+- **Consistência**: Garante uma abordagem consistente para acesso a dados em toda a aplicação.
+
+## Use Case Pattern
+
+### Vantagens:
+
+- **Isolamento da Lógica de Negócios**: Encapsula as regras de negócio em classes específicas de casos de uso, mantendo-as separadas de controladores e outras camadas.
+- **Legibilidade**: Melhora a legibilidade do código ao definir claramente o propósito e o fluxo de cada caso de uso.
+- **Escalabilidade**: Facilita a adição de novas funcionalidades ou a modificação de funcionalidades existentes sem impactar partes não relacionadas do código.
+- **Testabilidade**: Simplifica os testes ao isolar a lógica de negócios em classes pequenas e focadas.
+- **Princípio da Responsabilidade Única**: Incentiva a adesão ao Princípio da Responsabilidade Única, garantindo que cada classe de caso de uso tenha uma responsabilidade única e bem definida.

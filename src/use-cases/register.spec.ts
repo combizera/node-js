@@ -1,5 +1,24 @@
-import { test, expect } from 'vitest'
+import { describe, it, expect } from 'vitest'
+import { RegisterUseCase } from './register'
+import { PrismaUsersRepository } from '@/repositories/prisma/prisma-users-repository'
+import { compare } from 'bcryptjs'
 
-test('check if it works', () => {
-  expect(2 + 2).toBe(4)
+describe('register use case', () => {
+  it('should hash user password upon registration', async () => {
+    const prismaUsersRepository = new PrismaUsersRepository()
+    const registerUseCase = new RegisterUseCase(prismaUsersRepository)
+
+    const { user } = await registerUseCase.execute({
+      name: 'John Doe',
+      email: 'john.doe@example.com',
+      password: '123456',
+    })
+
+    const isPasswordCorrectlyHashed = await compare(
+      '123456',
+      user.password_hash,
+    )
+
+    expect(isPasswordCorrectlyHashed).toBe(true)
+  })
 })

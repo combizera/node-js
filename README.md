@@ -52,3 +52,13 @@ Gympass style app
 - **Escalabilidade**: Facilita a adição de novas funcionalidades ou a modificação de funcionalidades existentes sem impactar partes não relacionadas do código.
 - **Testabilidade**: Simplifica os testes ao isolar a lógica de negócios em classes pequenas e focadas.
 - **Princípio da Responsabilidade Única**: Incentiva a adesão ao Princípio da Responsabilidade Única, garantindo que cada classe de caso de uso tenha uma responsabilidade única e bem definida.
+
+---
+
+## TDD - Test Driven Development
+
+Já conhecia o conceito pelo Pinguin Academy mas foi bem interessante ver a visão do Diego e também ele foi um pouco além e também apresentou o fluxo do TDD, o "Red/Green/Refactor".
+
+1. Red: nesta fase, o desenvolvedor escreve um teste que deve falhar, ou seja, ele garante que o teste não passará sem implementar o código necessário.
+2. Green: aqui, o desenvolvedor escreve a quantidade mínima de código necessária para fazer o teste passar.
+3. Refactor: após o teste passar, o desenvolvedor refatora o código para melhorar a qualidade, sem alterar seu comportamento.
